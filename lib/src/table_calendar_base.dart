@@ -37,7 +37,7 @@ class TableCalendarBase extends StatefulWidget {
 
   TableCalendarBase({
     Key? key,
-    this.betweenWidget,
+
     required this.firstDay,
     required this.lastDay,
     required this.focusedDay,
@@ -70,6 +70,7 @@ class TableCalendarBase extends StatefulWidget {
     this.onVerticalSwipe,
     this.onPageChanged,
     this.onCalendarCreated,
+        this.betweenWidget,
   })  : assert(!dowVisible || (dowHeight != null && dowBuilder != null)),
         assert(isSameDay(focusedDay, firstDay) || focusedDay.isAfter(firstDay)),
         assert(isSameDay(focusedDay, lastDay) || focusedDay.isBefore(lastDay)),
