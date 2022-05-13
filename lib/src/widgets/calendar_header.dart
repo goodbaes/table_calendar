@@ -66,7 +66,7 @@ class CalendarHeader extends StatelessWidget {
                   ),
                 ),
           ),
-          if(betweenWidget!=null)betweenWidget
+         
                if (headerStyle.leftChevronVisible)
             CustomIconButton(
               icon: headerStyle.leftChevronIcon,
@@ -74,6 +74,7 @@ class CalendarHeader extends StatelessWidget {
               margin: headerStyle.leftChevronMargin,
               padding: headerStyle.leftChevronPadding,
             ),
+           betweenWidget??SizedBox()
           if (headerStyle.formatButtonVisible &&
               availableCalendarFormats.length > 1)
             Padding(
