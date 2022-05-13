@@ -30,6 +30,9 @@ enum RangeSelectionMode { disabled, toggledOff, toggledOn, enforced }
 
 /// Highly customizable, feature-packed Flutter calendar with gestures, animations and multiple formats.
 class TableCalendar<T> extends StatefulWidget {
+  /// Widget between chevrons
+    
+  final Widget? betweenWidget;
   /// Locale to format `TableCalendar` dates with, for example: `'en_US'`.
   ///
   /// If nothing is provided, a default locale will be used.
@@ -204,6 +207,7 @@ class TableCalendar<T> extends StatefulWidget {
   /// Creates a `TableCalendar` widget.
   TableCalendar({
     Key? key,
+      this.betweenWidget.
     required DateTime focusedDay,
     required DateTime firstDay,
     required DateTime lastDay,
@@ -450,6 +454,7 @@ class _TableCalendarState<T> extends State<TableCalendar<T>> {
             valueListenable: _focusedDay,
             builder: (context, value, _) {
               return CalendarHeader(
+                 betweenWidget,
                 headerTitleBuilder: widget.calendarBuilders.headerTitleBuilder,
                 focusedMonth: value,
                 onLeftChevronTap: _onLeftChevronTap,

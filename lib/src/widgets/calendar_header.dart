@@ -13,6 +13,7 @@ class CalendarHeader extends StatelessWidget {
   final dynamic locale;
   final DateTime focusedMonth;
   final CalendarFormat calendarFormat;
+  final Widget? betweenWidget;
   final HeaderStyle headerStyle;
   final VoidCallback onLeftChevronTap;
   final VoidCallback onRightChevronTap;
@@ -25,6 +26,7 @@ class CalendarHeader extends StatelessWidget {
   const CalendarHeader({
     Key? key,
     this.locale,
+    this.betweenWidget,
     required this.focusedMonth,
     required this.calendarFormat,
     required this.headerStyle,
@@ -64,6 +66,7 @@ class CalendarHeader extends StatelessWidget {
                   ),
                 ),
           ),
+          if(betweenWidget!=null)betweenWidget
                if (headerStyle.leftChevronVisible)
             CustomIconButton(
               icon: headerStyle.leftChevronIcon,

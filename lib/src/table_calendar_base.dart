@@ -8,6 +8,7 @@ import 'shared/utils.dart';
 import 'widgets/calendar_core.dart';
 
 class TableCalendarBase extends StatefulWidget {
+  final Widget? betweenWidget;
   final DateTime firstDay;
   final DateTime lastDay;
   final DateTime focusedDay;
@@ -36,6 +37,7 @@ class TableCalendarBase extends StatefulWidget {
 
   TableCalendarBase({
     Key? key,
+    this.betweenWidget,
     required this.firstDay,
     required this.lastDay,
     required this.focusedDay,
